@@ -1,0 +1,1 @@
+window.$=(b=>q=>(b=[...document.querySelectorAll(q)],b.length>1?b:b[0]))()
