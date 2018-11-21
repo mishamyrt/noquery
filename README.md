@@ -1,5 +1,5 @@
 # noQuery
-A function for elements selection in 67 ASCII chars.
+A function for elements selection in 71 ASCII chars.
 
 ```js
 const button = $('.button')

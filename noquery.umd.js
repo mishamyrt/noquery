@@ -1,1 +1,1 @@
-module.exports=(b=>q=>(b=[...document.querySelectorAll(q)],b.length>1?b:b[0]))()
+module.exports=$=(b=>(q,c=document)=>(b=[...c.querySelectorAll(q)],b.length>1?b:b[0]))()
