@@ -9,7 +9,7 @@ If only one element is found, the function will return it. Otherwise, it will re
 
 ```js
 $('.buttons').forEach((button) => {
-	button.onclick = () => {
+    button.onclick = () => {
         // do something
     }
 })
