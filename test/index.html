@@ -13,12 +13,14 @@
     <div class="parent">
         <div class="child"></div>
     </div>
+    <div class="not child"></div>
     <script src="../noquery.js"></script>
     <script>
         console.log({
             test: $('.test'),
             single: $('.single'),
             parent: $('.parent'),
+            child: $('.child', $('.parent')),
             null: $('.null'),
         })
     </script>
