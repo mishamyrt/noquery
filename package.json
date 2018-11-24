@@ -1,6 +1,6 @@
 {
   "name": "mishamyrt-noquery",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Teenie-weenie jQuery–like $ function for DOM queries",
   "main": "noquery.umd.js",
   "scripts": {
