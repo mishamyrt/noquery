@@ -3,7 +3,7 @@
 const {
   before,
   describe,
-  it,
+  it
 } = require('mocha')
 
 const startServer = require('./utils/start-server')
