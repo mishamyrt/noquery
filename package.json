@@ -4,7 +4,7 @@
   "description": "Teenie-weenie jQuery–like $ function for DOM queries",
   "main": "noquery.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha test/index.js --timeout 20000 --exit"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,18 @@
   "bugs": {
     "url": "https://github.com/mishamyrt/noquery/issues"
   },
-  "homepage": "https://github.com/mishamyrt/noquery#readme"
+  "homepage": "https://github.com/mishamyrt/noquery#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^6.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.4",
+    "puppeteer": "^1.18.0",
+    "static-server": "^2.2.1"
+  }
 }
