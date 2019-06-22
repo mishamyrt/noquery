@@ -1,7 +1,7 @@
-# noQuery [![Build Status](https://travis-ci.org/mishamyrt/noquery.svg?branch=master)][ci]
-
 <img src="https://mishamyrt.github.io/noquery/logo.svg" align="right"
      alt="Logo" width="70" height="128">
+
+# noQuery [![Build Status](https://travis-ci.org/mishamyrt/noquery.svg?branch=master)][ci]
 
 A function for elements selection in 71 ASCII chars.
 
