@@ -1,4 +1,8 @@
-# noQuery
+<img src="https://mishamyrt.github.io/noquery/logo.svg" align="right"
+     alt="Logo" width="50" height="101">
+
+# noQuery [![Build Status](https://travis-ci.org/mishamyrt/noquery.svg?branch=master)][ci]
+
 A function for elements selection in 71 ASCII chars.
 
 ```js
@@ -14,3 +18,5 @@ $('.buttons').forEach((button) => {
     }
 })
 ```
+
+[ci]: https://travis-ci.org/mishamyrt/noquery
