@@ -18,3 +18,5 @@ $('.buttons').forEach((button) => {
     }
 })
 ```
+
+[ci]: https://travis-ci.org/mishamyrt/noquery
