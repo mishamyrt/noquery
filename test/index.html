@@ -7,22 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="test"></div>
-    <div class="test"></div>
+    <div class="multiple"></div>
+    <div class="multiple"></div>
     <div class="single"></div>
     <div class="parent">
         <div class="child"></div>
     </div>
     <div class="not child"></div>
+
     <script src="../noquery.js"></script>
-    <script>
-        console.log({
-            test: $('.test'),
-            single: $('.single'),
-            parent: $('.parent'),
-            child: $('.child', $('.parent')),
-            null: $('.null'),
-        })
-    </script>
 </body>
 </html>
