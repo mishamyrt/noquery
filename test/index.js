@@ -6,7 +6,7 @@ const {
   it
 } = require('mocha')
 
-const startServer = require('./utils/start-server')
+const { startServer } = require('./utils.js')
 const puppeteer = require('puppeteer')
 const { expect } = require('chai').use(require('chai-as-promised'))
 
@@ -14,7 +14,7 @@ describe('noQuery', () => {
   let page
 
   before(async () => {
-    await startServer()
+    await startServer(1337)
     const browser = await puppeteer.launch()
     page = await browser.newPage()
     await page.goto(
