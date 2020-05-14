@@ -1,14 +1,11 @@
-'use strict'
-
+const puppeteer = require('puppeteer')
+const { startServer } = require('./utils.js')
+const { expect } = require('chai').use(require('chai-as-promised'))
 const {
   before,
   describe,
   it
 } = require('mocha')
-
-const { startServer } = require('./utils.js')
-const puppeteer = require('puppeteer')
-const { expect } = require('chai').use(require('chai-as-promised'))
 
 describe('noQuery', () => {
   let page
