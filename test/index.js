@@ -19,19 +19,19 @@ describe('noQuery', () => {
 
   it('should add function to global scope', async () => {
     const result = await page.evaluate(() => typeof window.$)
-    expect(result).to.equals('function')
+    return expect(result).to.equals('function')
   })
 
   it('should return HTMLElement if the only is found', async () => {
     const result = await page.evaluate(() =>
       window.$('.single') instanceof window.HTMLElement)
-    expect(result).to.equal(true)
+    return expect(result).to.be.true
   })
 
   it('should return array if multiple nodes found', async () => {
     const result = await page.evaluate(() =>
       Array.isArray(window.$('.multiple')))
-    expect(result).to.equal(true)
+    return expect(result).to.be.true
   })
 
   it('should search node in context', async () => {
@@ -42,11 +42,11 @@ describe('noQuery', () => {
       )
       return node.classList.contains('not')
     })
-    expect(result).to.equal(false)
+    return expect(result).to.be.false
   })
 
   it('should return undefined if node not found', async () => {
     const result = await page.evaluate(() => window.$('null'))
-    expect(result).to.equal(undefined)
+    return expect(result).to.be.undefined
   })
 })
