@@ -1,5 +1,4 @@
-const puppeteer = require('puppeteer')
-const { startServer } = require('./utils.js')
+const { startServer, getPage } = require('./utils.js')
 const { expect } = require('chai').use(require('chai-as-promised'))
 const {
   before,
@@ -12,12 +11,7 @@ describe('noQuery', () => {
 
   before(async () => {
     await startServer(1337)
-    const browser = await puppeteer.launch()
-    page = await browser.newPage()
-    await page.goto(
-      'http://127.0.0.1:1337/test/index.html',
-      { waitUntil: 'domcontentloaded' }
-    )
+    page = await getPage('index.html')
   })
 
   it('should add function to global scope', async () => {
