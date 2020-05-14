@@ -18,7 +18,7 @@ describe('noQuery', () => {
     const browser = await puppeteer.launch()
     page = await browser.newPage()
     await page.goto(
-      `http://127.0.0.1:1337/test/index.html`,
+      'http://127.0.0.1:1337/test/index.html',
       { waitUntil: 'domcontentloaded' }
     )
   })

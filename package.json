@@ -4,7 +4,9 @@
   "description": "Teenie-weenie jQuery–like $ function for DOM queries",
   "main": "noquery.umd.js",
   "scripts": {
-    "test": "npx mocha test/index.js --timeout 20000 --exit"
+    "test": "npm run lint && npm run e2e",
+    "e2e": "npx mocha test/index.js --timeout 20000 --exit",
+    "lint": "npx eslint ./test"
   },
   "repository": {
     "type": "git",
