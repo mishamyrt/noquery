@@ -21,23 +21,19 @@ describe('noQuery', () => {
   })
 
   it('should add function to global scope', async () => {
-    const result = await page.evaluate(() => {
-      return typeof window.$
-    })
+    const result = await page.evaluate(() => typeof window.$)
     expect(result).to.equals('function')
   })
 
   it('should return HTMLElement if the only is found', async () => {
-    const result = await page.evaluate(() => {
-      return window.$('.single') instanceof window.HTMLElement
-    })
+    const result = await page.evaluate(() =>
+      window.$('.single') instanceof window.HTMLElement)
     expect(result).to.equal(true)
   })
 
   it('should return array if multiple nodes found', async () => {
-    const result = await page.evaluate(() => {
-      return Array.isArray(window.$('.multiple'))
-    })
+    const result = await page.evaluate(() =>
+      Array.isArray(window.$('.multiple')))
     expect(result).to.equal(true)
   })
 
@@ -53,9 +49,7 @@ describe('noQuery', () => {
   })
 
   it('should return undefined if node not found', async () => {
-    const result = await page.evaluate(() => {
-      return window.$('null')
-    })
+    const result = await page.evaluate(() => window.$('null'))
     expect(result).to.equal(undefined)
   })
 })
