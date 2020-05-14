@@ -6,12 +6,15 @@ const {
   it
 } = require('mocha')
 
+const PORT = 1337
+const PAGE_PATH = 'index.html'
+
 describe('noQuery', () => {
   let page
 
   before(async () => {
-    await startServer(1337)
-    page = await getPage('index.html')
+    await startServer(PORT)
+    page = await getPage(PAGE_PATH)
   })
 
   it('should add function to global scope', async () => {
