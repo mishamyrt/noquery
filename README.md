@@ -6,17 +6,18 @@
 A function for elements selection in 71 ASCII chars.
 
 ```js
-const button = $('.button')
+const title = $('h1')
 ```
 
 If only one element is found, the function will return it. Otherwise, it will return an array with all [native methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
 ```js
-$('.buttons').forEach((button) => {
-    button.onclick = () => {
-        // do something
-    }
-})
+// Set click callback to all red buttons
+$('.button')
+  .filter(n => n.classList.contains('__red'))
+  .forEach(n => n.addEventListener(
+    'click', () => alert('Whoops')
+  ))
 ```
 
 [ci]: https://travis-ci.com/mishamyrt/noquery
