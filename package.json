@@ -1,9 +1,9 @@
 {
   "name": "mishamyrt-noquery",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Teenie-weenie jQuery–like $ function for DOM queries",
   "type": "module",
-  "main": "noquery.module.js",
+  "main": "noquery.js",
   "scripts": {
     "test": "npm run lint && npm run e2e",
     "e2e": "npx mocha test/index.js --timeout 20000 --exit",

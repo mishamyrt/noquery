@@ -15,6 +15,9 @@
     </div>
     <div class="not child"></div>
 
-    <script src="../noquery.js"></script>
+    <script type="module">
+      import { $ } from '/noquery.js';
+      window.$ = $
+    </script>
 </body>
 </html>
