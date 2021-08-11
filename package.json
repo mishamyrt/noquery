@@ -2,6 +2,7 @@
   "name": "mishamyrt-noquery",
   "version": "2.0.0",
   "description": "Teenie-weenie jQuery–like $ function for DOM queries",
+  "type": "module",
   "main": "noquery.module.js",
   "scripts": {
     "test": "npm run lint && npm run e2e",
@@ -23,16 +24,17 @@
   },
   "homepage": "https://github.com/mishamyrt/noquery#readme",
   "devDependencies": {
-    "chai": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
-    "eslint": "^7.0.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.20.2",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "mocha": "^7.1.2",
-    "puppeteer": "^3.0.4",
+    "eslint-plugin-promise": "^5.1.0",
+    "mocha": "^9.0.3",
+    "puppeteer": "^10.2.0",
     "static-server": "^2.2.1"
   }
 }

@@ -1,10 +1,14 @@
-const { startServer, getPage } = require('./utils.js')
-const { expect } = require('chai').use(require('chai-as-promised'))
-const {
+import { startServer, getPage } from './utils.js'
+import chai from 'chai'
+import chaiAsPromised from 'chai-as-promised'
+
+import {
   before,
   describe,
   it
-} = require('mocha')
+} from 'mocha'
+
+const { expect } = chai.use(chaiAsPromised)
 
 const PORT = 1337
 const PAGE_PATH = 'index.html'
