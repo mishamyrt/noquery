@@ -1,7 +1,7 @@
 <img src="https://mishamyrt.github.io/noquery/logo.svg" align="right"
      alt="Logo" width="50" height="101">
 
-# noQuery [![Build Status](https://travis-ci.com/mishamyrt/noquery.svg?branch=master)][ci]
+# noQuery [![Quality assurance](https://github.com/mishamyrt/noquery/actions/workflows/qa.yaml/badge.svg)](https://github.com/mishamyrt/noquery/actions/workflows/qa.yaml)
 
 A function for elements selection in 71 ASCII chars.
 
