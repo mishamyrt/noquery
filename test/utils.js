@@ -1,28 +1,34 @@
+// @ts-check
 import StaticServer from 'static-server'
 import puppeteer from 'puppeteer'
 import { resolve as resolvePath } from 'path'
 
-/**
- * @param {number} port Port where the server will be started
- * @returns {number} Promise object represents the server is started
- */
-export const startServer = port =>
-  new Promise(resolve =>
-    new StaticServer({
-      rootPath: resolvePath(),
-      port: port,
-      host: '127.0.0.1'
-    }).start(resolve))
+const LOCALHOST = '127.0.0.1'
+const PORT = 1337
+const PAGE_PATH = 'index.html'
 
 /**
- * @param {string} path HTML file path
- * @returns {Page} Puppeteer page instance
+ * Starts static server on locahost
+ * @returns {Promise<void>} Promise object represents the server is started
  */
-export const getPage = async (path) => {
+export function startServer () {
+  return new Promise(resolve =>
+    new StaticServer({
+      rootPath: resolvePath(),
+      port: PORT,
+      host: LOCALHOST
+    }).start(resolve))
+}
+
+/**
+ * Creates Puppeteer page with test content
+ * @returns {Promise<import('puppeteer').Page>} Puppeteer page instance
+ */
+export async function getPage () {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   await page.goto(
-    `http://127.0.0.1:1337/test/${path}`,
+    `http://${LOCALHOST}:${PORT}/test/${PAGE_PATH}`,
     { waitUntil: 'domcontentloaded' }
   )
   return page

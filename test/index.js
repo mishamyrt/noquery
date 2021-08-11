@@ -10,15 +10,12 @@ import {
 
 const { expect } = chai.use(chaiAsPromised)
 
-const PORT = 1337
-const PAGE_PATH = 'index.html'
-
 describe('noQuery', () => {
   let page
 
   before(async () => {
-    await startServer(PORT)
-    page = await getPage(PAGE_PATH)
+    await startServer()
+    page = await getPage()
   })
 
   it('should add function to global scope', async () => {
